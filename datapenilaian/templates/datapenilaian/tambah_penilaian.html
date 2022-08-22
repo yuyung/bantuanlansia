@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+      <div class="page-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <form class="form-horizontal" method="post">
+                {% csrf_token %}
+                  <div class="card-body">
+                    <h4 class="card-title">Tambah data penilaian</h4>
+                    <div class="form-group row">
+                      <label for="fname" class="col-sm-3 text-end control-label col-form-label">Id penilaian</label>
+                      <div class="col-sm-9">
+                      {{ form.idpenilaian }}
+                        <!-- <input type="text" class="form-control" id="fname" placeholder="masukan id warga"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label">Kode alternatif</label>
+                      <div class="col-sm-9">
+                      {{ form.kodealternatif }}
+                        <!-- <input type="text" class="form-control" id="lname" placeholder="masukan no"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label" >Nama warga</label>
+                      <div class="col-sm-9">
+                      {{ form.namawarga }}
+                        <!-- <input type="password" class="form-control" id="lname" placeholder="masukan nik"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="email1" class="col-sm-3 text-end control-label col-form-label" >SR</label> 
+                      <div class="col-sm-9">
+                      {{ form.statusrumah }}
+                       <!--  <input type="text" class="form-control" id="email1"placeholder="masukan nama warga"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">FR</label>
+                      <div class="col-sm-9">
+                      {{ form.fasilitasrumah }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">PK</label>
+                      <div class="col-sm-9">
+                      {{ form.pekerjaan }}
+                        <!-- <input type="text" ="form-control" id="cono1" placeholder="masukan nomer telepon"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">PH</label>
+                      <div class="col-sm-9">
+                      {{ form.penghasilan }}
+                        <!-- <input type="text" ="form-control" id="cono1" placeholder="masukan nomer telepon"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">TG</label>
+                      <div class="col-sm-9">
+                      {{ form.tanggungan }}
+                        <!-- <input type="text" ="form-control" id="cono1" placeholder="masukan nomer telepon"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">KD</label>
+                      <div class="col-sm-9">
+                      {{ form.kendaraan }}
+                        <!-- <input type="text" ="form-control" id="cono1" placeholder="masukan nomer telepon"/> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-top">
+                    <div class="card-body">
+                      <button type="submit" class="btn btn-primary">
+                        Simpan
+                      </button>
+                    &emsp;
+                      <button type="reset" class="btn btn-primary">
+                        Hapus
+                      </button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="card-body">
+                    <h5 class="card-title"><b>Keterangan!</b></h5>
+                    <b>Kriteria</b>
+                    <p>SR = Status Rumah</p>
+                    <p>FR = Fasilitas Rumah</p>
+                    <p>PK = Pekerjaan</p>
+                    <p>PH = Penghasilan</p>
+                    <p>TG = Tanggungan</p>
+                    <p>KD = Kendaraan</p>
+                    <br>
+                    <b>Sub Kriteria</b>
+                    <p>1. Status Rumah (Milik sendiri, Sewa/Kontrak)</p>
+                    <p>2. Fasilitas Rumah (Kurang lengkap, Lengkap, Sangat Lengkap)</p>
+                    <p>3. Pekerjaan (Tidak bekerja/Serabutan, Pensiunan/IRT, Petani/Nelayan, Wiraswasta, Pegawai Swasta)</p>
+                    <p>4. Penghasilan (Dibawah 1 jt, 1 jt-1,5 jt, 2 jt-2,5 jt, Diatas 3 jt )</p>
+                    <p>5. Tanggungan (1, 2, 3, 4, 5)</p>
+                    <p>6. Kendaraan (Tidak memiliki, Memiliki)</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock content %}

@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+      <div class="page-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <form class="form-horizontal" method="post">
+                {% csrf_token %}
+                  <div class="card-body">
+                    <h4 class="card-title">Tambah data warga</h4>
+                    <div class="form-group row">
+                      <label for="fname" class="col-sm-3 text-end control-label col-form-label">Id Warga</label>
+                      <div class="col-sm-9">
+                      {{ form.idwarga }}
+                        <!-- <input type="text" class="form-control" id="fname" placeholder="masukan id warga"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label">No</label>
+                      <div class="col-sm-9">
+                      {{ form.no }}
+                        <!-- <input type="text" class="form-control" id="lname" placeholder="masukan no"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label" >NIK</label>
+                      <div class="col-sm-9">
+                      {{ form.nik }}
+                        <!-- <input type="password" class="form-control" id="lname" placeholder="masukan nik"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="email1" class="col-sm-3 text-end control-label col-form-label" >Nama Warga</label> 
+                      <div class="col-sm-9">
+                      {{ form.namawarga }}
+                       <!--  <input type="text" class="form-control" id="email1"placeholder="masukan nama warga"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Umur</label>
+                      <div class="col-sm-9">
+                      {{ form.umur }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Telepon</label>
+                      <div class="col-sm-9">
+                      {{ form.telepon }}
+                        <!-- <input type="text" ="form-control" id="cono1" placeholder="masukan nomer telepon"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Status Rumah</label>
+                      <div class="col-sm-9">
+                      {{ form.statusrumah }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Fasilitas Rumah </label>
+                      <div class="col-sm-9">
+                      {{ form.fasilitasrumah }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Pekerjaan</label>
+                      <div class="col-sm-9">
+                      {{ form.pekerjaan }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Penghasilan</label>
+                      <div class="col-sm-9">
+                      {{ form.penghasilan }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Tanggungan</label>
+                      <div class="col-sm-9">
+                      {{ form.tanggungan }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Kendaraan</label>
+                      <div class="col-sm-9">
+                      {{ form.kendaraan }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-top">
+                    <div class="card-body">
+                      <button type="submit" class="btn btn-primary">
+                        Simpan
+                      </button>
+                    &emsp;
+                      <button type="reset" class="btn btn-primary">
+                        Hapus
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock content %}

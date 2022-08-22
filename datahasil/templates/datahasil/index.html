@@ -1,0 +1,46 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+      <div class="page-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body" >
+                  <h5 class="card-title">Hasil Penilaian</h5>
+                    <button class="btn btn-primary" id="btnHasil" value="Export">
+                    Download
+                    </button>
+                  <div class="table-responsive" id="download1">
+                    <table
+                      id="zero_config"
+                      class="table table-striped table-bordered">
+                      <br>
+                      <thead>
+                        <tr>
+                          <th>NIK</th>
+                          <th>Nama Warga</th>
+                          <th>Nilai S</th>
+                          <th>Nilai Akhir</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for p in data %}
+                        <tr>
+                          <td>{{ p.nik }}</td>
+                          <td>{{ p.nama }}</td>
+                          <td>{{ p.s }}</td>
+                          <td>{{ p.v }}</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock content %}

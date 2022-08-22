@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+      <div class="page-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <form class="form-horizontal" method="post">
+                {% csrf_token %}
+                  <div class="card-body">
+                    <h4 class="card-title">Tambah data sub kriteria</h4>
+                    <div class="form-group row">
+                      <label for="fname" class="col-sm-3 text-end control-label col-form-label">Id Sub Kriteria</label>
+                      <div class="col-sm-9">
+                      {{ form.idsubkriteria }}
+                        <!-- <input type="text" class="form-control" id="fname" placeholder="masukan id warga"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label">Id Kriteria</label>
+                      <div class="col-sm-9">
+                      {{ form.idkriteria }}
+                        <!-- <input type="text" class="form-control" id="lname" placeholder="masukan no"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label" >No</label>
+                      <div class="col-sm-9">
+                      {{ form.no }}
+                        <!-- <input type="password" class="form-control" id="lname" placeholder="masukan nik"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="email1" class="col-sm-3 text-end control-label col-form-label" >Nama Kriteria</label> 
+                      <div class="col-sm-9">
+                      {{ form.namakriteria}}
+                       <!--  <input type="text" class="form-control" id="email1"placeholder="masukan nama warga"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Kode Kriteria</label>
+                      <div class="col-sm-9">
+                      {{ form.kodekriteria }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Nama Sub Kriteria</label>
+                      <div class="col-sm-9">
+                      {{ form.namasubkriteria }}
+                        <!-- <input type="text" ="form-control" id="cono1" placeholder="masukan nomer telepon"/> -->
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Nilai</label>
+                      <div class="col-sm-9">
+                      {{ form.nilai }}
+                        <!-- <input type="text" class="form-control" id="cono1" placeholder="masukan umur"/> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-top">
+                    <div class="card-body">
+                      <button type="submit" class="btn btn-primary">
+                        Simpan
+                      </button>
+                    &emsp;
+                      <button type="reset" class="btn btn-primary">
+                        Hapus
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock content %}
